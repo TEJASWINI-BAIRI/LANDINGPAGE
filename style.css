@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right top, #fbf3f8, #fbe4f4, #f9d6f1, #f6c7ee, #f1b9ed);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;  /* reduced padding (was 20px) */
+    background-image: linear-gradient(to bottom, #fbf3f8, #fbe6f4, #fadff2, #f4c2ed, #e9a6ec);
+    height: auto; /* ensure height adjusts with padding */
+}
+
+.logo img {
+    height: 60px;  /* reduce logo height */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px; /* slightly less gap */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;  /* smaller font size */
+    line-height: 1.2;
+    padding: 5px 8px; /* reduce padding inside nav links */
+}
+
+
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
+    min-height: auto;
+    gap: 20px;
+}
+
+
+.hero-content {
+    max-width: 60%;
+    font-size: 15px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: #333;
+}
+
+.hero-content .highlight {
+    color: #ce2da8;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #f20cc4;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-image {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns image to the top */
+    padding: 10px;
+}
+
+
+.hero-image img {
+    max-width: 100%;
+    max-height: 300px; /* Limits the image height */
+    height: auto;
+    object-fit: contain; /* Prevents distortion */
+}
+
+
+.thumb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.thumb li {
+    list-style: none;
+    margin: 10px;
+    flex: 1 1 150px;
+    text-align: center;
+}
+
+.thumb li img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media i {
+    font-size: 24px;
+    color: #333;
+}
+
+.h3 {
+    font-size: 2em;
+    color: #ce2da8;
+    text-shadow: 2px 2px 8px rgba(255, 105, 180, 0.5);
+    animation: shine 2s infinite linear;
+}
+
+@keyframes shine {
+    0%, 100% {
+        text-shadow: 2px 2px 8px rgba(255, 105, 180, 0.5);
+    }
+    50% {
+        text-shadow: 4px 4px 12px rgba(255, 105, 180, 1);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        font-size: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-image {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .h3 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .thumb li {
+        flex: 1 1 100%;
+    }
+}
